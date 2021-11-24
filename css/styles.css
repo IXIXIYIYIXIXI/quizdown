@@ -1,0 +1,54 @@
+body {
+	background-color: black;
+}
+
+.header {
+	background-color: rgb(255, 83, 83);
+	color: rgb(248, 249, 250);
+}
+
+.game {
+	text-align: center;
+	font-family: GothamMedium;
+	font-size: 24px;
+}
+
+.question {
+	
+}
+
+.question__item {
+	width: 20%;
+	margin: 0 auto;
+}
+
+.question__text {
+	color: rgb(248, 249, 250);
+}
+
+.answers {
+	
+}
+
+.answer__item {
+	background-color: white;
+	color: black;
+	width: 20%;
+	border-radius: 10px;
+	margin: 10px auto;
+	padding: 5px 0 5px 0;
+}
+
+.answer__item--correct {
+	background-color: rgb(3, 125, 71);
+	color: rgb(248, 249, 250);
+}
+
+.answer__item--incorrect {
+	background-color: rgb(129, 31, 37);
+	color: rgb(248, 249, 250);
+}
+
+.answer__text {
+
+}
