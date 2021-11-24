@@ -4,7 +4,7 @@ body {
 
 .header {
 	background-color: rgb(255, 83, 83);
-	color: rgb(248, 249, 250);
+	color: white;
 }
 
 .game {
@@ -23,7 +23,8 @@ body {
 }
 
 .question__text {
-	color: rgb(248, 249, 250);
+	color: white;
+	user-select: none;
 }
 
 .answers {
@@ -41,14 +42,14 @@ body {
 
 .answer__item--correct {
 	background-color: rgb(3, 125, 71);
-	color: rgb(248, 249, 250);
+	color: white;
 }
 
 .answer__item--incorrect {
 	background-color: rgb(129, 31, 37);
-	color: rgb(248, 249, 250);
+	color: white;
 }
 
 .answer__text {
-
+	user-select: none;
 }
