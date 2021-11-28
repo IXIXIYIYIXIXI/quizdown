@@ -2,9 +2,14 @@ body {
 	background-color: black;
 }
 
+#start-button {
+	background-color: white;
+	color: black;
+}
+
 .header {
 	background-color: rgb(255, 83, 83);
-	color: white;
+	text-align: center;
 }
 
 .game {
@@ -14,7 +19,7 @@ body {
 }
 
 .question {
-	
+	display: none;
 }
 
 .question__item {
@@ -31,7 +36,12 @@ body {
 	
 }
 
+.answers--not_selectable {
+	
+}
+
 .answer__item {
+	display: none;
 	background-color: white;
 	color: black;
 	width: 20%;
