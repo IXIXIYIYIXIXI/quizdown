@@ -11,6 +11,7 @@ $(document).ready(function() {
 				$(this).addClass("answer__item--incorrect");
 				$(".answer__item").first().addClass("answer__item--correct");
 			}
+			$(".answers").addClass("answers--not_selectable");
 		}
 	});
 

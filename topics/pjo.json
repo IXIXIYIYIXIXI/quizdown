@@ -1,0 +1,75 @@
+{
+  "icon": "imageURL",
+  "questions": [
+    {
+      "question": "What is the first book of the Percy Jackson & The Olympians series?",
+      "answers": [
+        "The Lightning Thief",
+        "The Sea of Monsters",
+        "The Titan's Curse",
+        "The Battle of the Labyrinth"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What color was Paul's car?",
+      "answers": [
+        "Blue",
+        "Black",
+        "Red",
+        "White"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What floor is Olympus located on?",
+      "answers": [
+        "200",
+        "300",
+        "450",
+        "600"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the shortest book in the Percy Jackson & The Olympians series?",
+      "answers": [
+        "The Lightning Thief",
+        "The Sea of Monsters",
+        "The Titan's Curse",
+        "The Last Olympian"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Whose father is a famous film star?",
+      "answers": [
+        "Nico di Angelo",
+        "Annabeth Chase",
+        "Thalia Grace",
+        "Piper McLean"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which cabin is cabin number 6?",
+      "answers": [
+        "Athena",
+        "Artemis",
+        "Demeter",
+        "Ares"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which cabin is cabin number 8?",
+      "answers": [
+        "Athena",
+        "Artemis",
+        "Aphrodite",
+        "Hephaestus"
+      ],
+      "correct": 1
+    }
+  ]
+}
