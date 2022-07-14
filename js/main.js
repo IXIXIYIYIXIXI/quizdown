@@ -1,4 +1,4 @@
-var ws_uri = "ws://localhost:8080";
+var ws_uri = "ws://127.0.0.1:8080";
 var websocket = new WebSocket(ws_uri);
 
 // on websocket open

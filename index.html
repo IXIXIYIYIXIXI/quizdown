@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>
+    <title>Chat</title>
+    <link type="text/css" href="./css/main.css" rel="stylesheet" />
 </head>
 <body>
-	<div id="chat">
-		<div id="chat-messages">
-			<form id="chat-form" method="post">
-				<input type="text" name="message" placeholder="Type a message..." maxlength="500" autocomplete="off">
-				<button type="submit">Send</button>
-			</form>
-		</div>
-	</div>
+<div id="chat">
+    <div id="chat-messages"></div>
+
+    <form id="chat-form" method="post">
+        <input type="text" name="message" placeHolder="Enter a message..." maxlength="500" autoComplete="off" />
+        <button type="submit">Send</button>
+    </form>
+</div>
+<script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
