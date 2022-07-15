@@ -1,4 +1,4 @@
-var ws_uri = "ws://127.0.0.1:8080";
+var ws_uri = "ws://73.99.119.5:8080";
 var websocket = new WebSocket(ws_uri);
 
 // on websocket open
@@ -19,8 +19,8 @@ websocket.onerror = function(event) {
 // on websocket message received
 websocket.onmessage = function(event) {
     var data = JSON.parse(event.data);
-
-    if (data.type == "message") {
+	
+	if (data.type == "message") {
         MessageAdd('<div class="message">' + data.username + ': ' + data.message + '</div>');
     }
 }
