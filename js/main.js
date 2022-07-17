@@ -1,66 +1,36 @@
-var ws_uri = "ws://73.99.119.5:8080";
+var ws_uri = "ws://localhost:8080";
 var websocket = new WebSocket(ws_uri);
 
 // on websocket open
 websocket.onopen = function(event) {
-    MessageAdd('<div class="message green">You have entered the chat room.</div>');
+    console.log('You have entered the chat room.');
 };
 
 // on websocket close
 websocket.onclose = function(event) {
-    MessageAdd('<div class="message blue">You have been disconnected.</div>');
+    console.log('You have been disconnected.');
 };
 
 // on websocket error
 websocket.onerror = function(event) {
-	MessageAdd('<div class="message red">Connection to chat failed.</div>');
+	console.log('Connection to chat failed.');
 };
 
 // on websocket message received
 websocket.onmessage = function(event) {
     var data = JSON.parse(event.data);
+
+	if (data.type == "opponent_ready") {
+		document.getElementById("opponent-ready").innerHTML = "Opponent is ready!";
+	}
+};
+
+function readyClicked() {
+	document.getElementById("you-ready").innerHTML = "You are ready!";
 	
-	if (data.type == "message") {
-        MessageAdd('<div class="message">' + data.username + ': ' + data.message + '</div>');
-    }
-}
+	var data = {
+		type: "ready"
+	};
 
-document.getElementById("chat-form").addEventListener("submit", function(event) {
-	event.preventDefault();
-
-	var message_element = document.getElementsByTagName("input")[0];
-	var message = message_element.value;
-
-	if (message.toString().length) {
-		var username = localStorage.getItem("username");
-
-		var data = {
-			type: "message",
-			username: username,
-			message: message
-		};
-
-		websocket.send(JSON.stringify(data));
-		message_element.value = "";
-	}
-}, false);
-
-function Username() {
-	var username = window.prompt("Enter your username:", "");
-
-	if (username.toString().length > 2) {
-		localStorage.setItem("username", username);
-	} else {
-		alert("Your username must be at least two characters.");
-		Username();
-	}
-}
-
-Username();
-
-function MessageAdd(message) {
-	var chat_messages = document.getElementById("chat-messages");
-
-	chat_messages.insertAdjacentHTML("beforeend", message);
-	chat_messages.scrollTop = chat_messages.scrollHeight;
+	websocket.send(JSON.stringify(data));
 }
